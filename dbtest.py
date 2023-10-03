@@ -1,20 +1,20 @@
-# import librosa
-# import librosa.display
-# import matplotlib.pyplot as plt
-# import numpy as np
-# # Load audio file with librosa
-# y,sr = librosa.load('1_0.wav')
-# print(y.shape)
-# # Plot the spectrogram
-# D = librosa.stft(y)  # STFT of y
-# S_db = librosa.amplitude_to_db(np.abs(D), ref=np.max)
-# print(S_db)
-# print(S_db.shape)
-# y, sr = librosa.load('1_0.wav')
-# librosa.display.waveshow(y)
-# # plt.figure()
-# # plt.plot(S_db, x_axis='time', y_axis='hz')
-# plt.show()
+import librosa
+import librosa.display
+import matplotlib.pyplot as plt
+import numpy as np
+# Load audio file with librosa
+y,sr = librosa.load('1_0.wav')
+print(y.shape)
+# Plot the spectrogram
+D = librosa.stft(y)  # STFT of y
+S_db = librosa.amplitude_to_db(np.abs(D), ref=np.max)
+print(S_db)
+print(S_db.shape)
+y, sr = librosa.load('1_0.wav')
+librosa.display.waveshow(y)
+plt.figure()
+plt.plot(S_db, x_axis='time', y_axis='hz')
+plt.show()
 
 import librosa
 import librosa.display
